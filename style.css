@@ -1,0 +1,11 @@
+.carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+
+.products-carousel .card {
+  transition: transform 0.3s;
+}
+
+.products-carousel .card:hover {
+  transform: translateY(-5px);
+}

@@ -1,0 +1,566 @@
+[2025-02-12T00:17:07.468Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2025-02-12T00:17:07.519Z] Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2025-02-12T00:17:07.526Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2025-02-12T00:17:07.533Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sections';
+[2025-02-12T00:17:07.539Z] Executing (default): PRAGMA INDEX_LIST(`Sections`)
+[2025-02-12T00:17:07.546Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Products';
+[2025-02-12T00:17:07.553Z] Executing (default): PRAGMA INDEX_LIST(`Products`)
+[2025-02-12T00:17:07.561Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sessions';
+[2025-02-12T00:17:07.567Z] Executing (default): PRAGMA INDEX_LIST(`Sessions`)
+[2025-02-12T00:17:07.574Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Sessions_1`)
+[2025-02-12T00:17:24.030Z] Executing (default): SELECT `id`, `username`, `password`, `restaurantName`, `logo`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'Rocket';
+[2025-02-12T00:17:24.381Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:17:24.421Z] Executing (default): INSERT INTO `Sessions` (`sid`,`expires`,`data`,`createdAt`,`updatedAt`) VALUES ($1,$2,$3,$4,$5);
+[2025-02-12T00:17:24.435Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:17:24.496Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 1;
+[2025-02-12T00:17:24.698Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:17:24.898Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:17:24.920Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:17:26.412Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:17:26.432Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T00:17:26.534Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:17:26.716Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:17:26.733Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:17:26.749Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:17:26.759Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:17:26.773Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:17:26.784Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:17:26.831Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:17:26.841Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:17:26.855Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:17:26.867Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:17:26.879Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:17:26.890Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:17:26.930Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:17:27.049Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:32:07.400Z] Executing (default): DELETE FROM `Sessions` WHERE `expires` < '2025-02-12 00:32:07.398 +00:00'
+[2025-02-12T00:37:07.315Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2025-02-12T00:37:07.320Z] Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2025-02-12T00:37:07.321Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2025-02-12T00:37:07.323Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sections';
+[2025-02-12T00:37:07.324Z] Executing (default): PRAGMA INDEX_LIST(`Sections`)
+[2025-02-12T00:37:07.326Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Products';
+[2025-02-12T00:37:07.327Z] Executing (default): PRAGMA INDEX_LIST(`Products`)
+[2025-02-12T00:37:07.329Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sessions';
+[2025-02-12T00:37:07.330Z] Executing (default): PRAGMA INDEX_LIST(`Sessions`)
+[2025-02-12T00:37:07.331Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Sessions_1`)
+[2025-02-12T00:37:21.783Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:21.792Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T00:37:21.837Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:21.901Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:21.909Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:21.917Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:21.924Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:21.933Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:21.938Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:21.943Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:21.967Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:21.972Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:21.977Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:22.038Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:22.041Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:22.043Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:22.045Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:43.236Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2025-02-12T00:37:43.241Z] Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2025-02-12T00:37:43.243Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2025-02-12T00:37:43.244Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sections';
+[2025-02-12T00:37:43.245Z] Executing (default): PRAGMA INDEX_LIST(`Sections`)
+[2025-02-12T00:37:43.247Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Products';
+[2025-02-12T00:37:43.248Z] Executing (default): PRAGMA INDEX_LIST(`Products`)
+[2025-02-12T00:37:43.249Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sessions';
+[2025-02-12T00:37:43.250Z] Executing (default): PRAGMA INDEX_LIST(`Sessions`)
+[2025-02-12T00:37:43.251Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Sessions_1`)
+[2025-02-12T00:37:44.680Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:44.689Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T00:37:44.732Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:44.755Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:44.759Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:44.766Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:44.770Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:44.772Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:44.774Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:44.784Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:44.786Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:44.788Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:44.790Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:44.792Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:44.794Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:44.805Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:44.837Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:49.099Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:49.102Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T00:37:49.119Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:49.149Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:49.151Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:49.156Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:49.158Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:49.160Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:49.162Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:49.164Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:49.166Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:49.197Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:49.203Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:49.205Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:49.207Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:49.209Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:49.235Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:50.883Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:50.886Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T00:37:50.902Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:50.927Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:50.929Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:50.934Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:50.936Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:50.938Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:50.940Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:50.942Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:50.944Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:50.953Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:50.961Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:50.963Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:50.965Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:50.967Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:51.010Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:51.076Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:51.079Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T00:37:51.094Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:51.132Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:51.135Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:51.140Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:51.143Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:51.153Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:51.156Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:51.158Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:51.160Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:51.163Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:37:51.184Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:51.186Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:51.188Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:51.190Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:37:51.191Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:46:12.720Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2025-02-12T00:46:12.730Z] Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2025-02-12T00:46:12.733Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2025-02-12T00:46:12.736Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sections';
+[2025-02-12T00:46:12.739Z] Executing (default): PRAGMA INDEX_LIST(`Sections`)
+[2025-02-12T00:46:12.742Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Products';
+[2025-02-12T00:46:12.745Z] Executing (default): PRAGMA INDEX_LIST(`Products`)
+[2025-02-12T00:46:12.748Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sessions';
+[2025-02-12T00:46:12.751Z] Executing (default): PRAGMA INDEX_LIST(`Sessions`)
+[2025-02-12T00:46:12.753Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Sessions_1`)
+[2025-02-12T00:46:30.855Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:46:30.880Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T00:46:30.983Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:46:32.296Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:46:32.305Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T00:46:32.347Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:47:12.439Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2025-02-12T00:47:12.449Z] Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2025-02-12T00:47:12.452Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2025-02-12T00:47:12.455Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sections';
+[2025-02-12T00:47:12.458Z] Executing (default): PRAGMA INDEX_LIST(`Sections`)
+[2025-02-12T00:47:12.461Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Products';
+[2025-02-12T00:47:12.464Z] Executing (default): PRAGMA INDEX_LIST(`Products`)
+[2025-02-12T00:47:12.467Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sessions';
+[2025-02-12T00:47:12.470Z] Executing (default): PRAGMA INDEX_LIST(`Sessions`)
+[2025-02-12T00:47:12.472Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Sessions_1`)
+[2025-02-12T00:48:59.132Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2025-02-12T00:48:59.155Z] Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2025-02-12T00:48:59.161Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2025-02-12T00:48:59.168Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sections';
+[2025-02-12T00:48:59.176Z] Executing (default): PRAGMA INDEX_LIST(`Sections`)
+[2025-02-12T00:48:59.184Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Products';
+[2025-02-12T00:48:59.190Z] Executing (default): PRAGMA INDEX_LIST(`Products`)
+[2025-02-12T00:48:59.196Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sessions';
+[2025-02-12T00:48:59.202Z] Executing (default): PRAGMA INDEX_LIST(`Sessions`)
+[2025-02-12T00:48:59.208Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Sessions_1`)
+[2025-02-12T00:49:00.762Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:49:00.787Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T00:49:00.904Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:49:14.095Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2025-02-12T00:49:14.106Z] Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2025-02-12T00:49:14.109Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2025-02-12T00:49:14.113Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sections';
+[2025-02-12T00:49:14.116Z] Executing (default): PRAGMA INDEX_LIST(`Sections`)
+[2025-02-12T00:49:14.120Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Products';
+[2025-02-12T00:49:14.123Z] Executing (default): PRAGMA INDEX_LIST(`Products`)
+[2025-02-12T00:49:14.126Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sessions';
+[2025-02-12T00:49:14.129Z] Executing (default): PRAGMA INDEX_LIST(`Sessions`)
+[2025-02-12T00:49:14.136Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Sessions_1`)
+[2025-02-12T00:49:18.265Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:49:18.277Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T00:49:18.340Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:53:55.349Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2025-02-12T00:53:55.358Z] Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2025-02-12T00:53:55.361Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2025-02-12T00:53:55.364Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sections';
+[2025-02-12T00:53:55.367Z] Executing (default): PRAGMA INDEX_LIST(`Sections`)
+[2025-02-12T00:53:55.370Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Products';
+[2025-02-12T00:53:55.373Z] Executing (default): PRAGMA INDEX_LIST(`Products`)
+[2025-02-12T00:53:55.376Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sessions';
+[2025-02-12T00:53:55.379Z] Executing (default): PRAGMA INDEX_LIST(`Sessions`)
+[2025-02-12T00:53:55.381Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Sessions_1`)
+[2025-02-12T00:54:02.627Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:54:02.638Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T00:54:02.693Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:55:33.035Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2025-02-12T00:55:33.045Z] Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2025-02-12T00:55:33.048Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2025-02-12T00:55:33.051Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sections';
+[2025-02-12T00:55:33.054Z] Executing (default): PRAGMA INDEX_LIST(`Sections`)
+[2025-02-12T00:55:33.057Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Products';
+[2025-02-12T00:55:33.059Z] Executing (default): PRAGMA INDEX_LIST(`Products`)
+[2025-02-12T00:55:33.062Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sessions';
+[2025-02-12T00:55:33.065Z] Executing (default): PRAGMA INDEX_LIST(`Sessions`)
+[2025-02-12T00:55:33.068Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Sessions_1`)
+[2025-02-12T00:55:37.263Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:55:37.292Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T00:55:37.439Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:55:37.538Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:55:37.546Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:55:37.562Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:55:37.570Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:55:37.624Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:55:37.641Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:55:37.648Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:55:37.656Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:55:37.662Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T00:55:37.685Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:55:37.690Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:55:37.696Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:55:37.703Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T00:55:37.708Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:00:39.563Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2025-02-12T01:00:39.578Z] Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2025-02-12T01:00:39.582Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2025-02-12T01:00:39.587Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sections';
+[2025-02-12T01:00:39.592Z] Executing (default): PRAGMA INDEX_LIST(`Sections`)
+[2025-02-12T01:00:39.597Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Products';
+[2025-02-12T01:00:39.601Z] Executing (default): PRAGMA INDEX_LIST(`Products`)
+[2025-02-12T01:00:39.606Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sessions';
+[2025-02-12T01:00:39.609Z] Executing (default): PRAGMA INDEX_LIST(`Sessions`)
+[2025-02-12T01:00:39.619Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Sessions_1`)
+[2025-02-12T01:00:39.839Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:00:39.863Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T01:00:39.973Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:01:49.321Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2025-02-12T01:01:49.341Z] Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2025-02-12T01:01:49.346Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2025-02-12T01:01:49.352Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sections';
+[2025-02-12T01:01:49.358Z] Executing (default): PRAGMA INDEX_LIST(`Sections`)
+[2025-02-12T01:01:49.365Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Products';
+[2025-02-12T01:01:49.370Z] Executing (default): PRAGMA INDEX_LIST(`Products`)
+[2025-02-12T01:01:49.377Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sessions';
+[2025-02-12T01:01:49.383Z] Executing (default): PRAGMA INDEX_LIST(`Sessions`)
+[2025-02-12T01:01:49.387Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Sessions_1`)
+[2025-02-12T01:01:49.658Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:01:49.733Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T01:01:50.216Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:01:51.006Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:01:51.034Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:01:51.081Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:01:51.129Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:01:51.149Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:01:51.190Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:01:51.272Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:01:51.321Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:01:51.520Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:01:51.602Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:01:51.631Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:01:51.656Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:01:51.678Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:01:51.832Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:33.102Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:33.109Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T01:02:33.146Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:33.250Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:33.256Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:33.268Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:33.273Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:33.287Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:33.298Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:33.304Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:33.309Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:33.316Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:33.344Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:33.352Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:33.374Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:33.381Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:33.389Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:34.748Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:34.758Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 1;
+[2025-02-12T01:02:34.801Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:34.881Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:34.894Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:37.611Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:37.615Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 1;
+[2025-02-12T01:02:37.635Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:37.670Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:37.675Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:41.000Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:41.005Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T01:02:41.027Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:41.082Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:41.089Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:41.094Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:41.098Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:41.102Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:41.106Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:41.112Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:41.139Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:41.144Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:41.149Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:41.153Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:41.157Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:02:41.162Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:02:41.226Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:03:57.873Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:03:57.881Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:03:57.887Z] Executing (default): DELETE FROM `Sessions` WHERE `sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW'
+[2025-02-12T01:03:57.917Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:04:03.814Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:04:03.825Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:04:19.757Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:04:19.812Z] Executing (default): SELECT `id`, `username`, `password`, `restaurantName`, `logo`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'admin';
+[2025-02-12T01:04:22.634Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'wDyn15c4Mf83tZrKtPLUPaMlov2GdQVW';
+[2025-02-12T01:04:22.642Z] Executing (default): SELECT `id`, `username`, `password`, `restaurantName`, `logo`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'Rocket';
+[2025-02-12T01:04:22.828Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:04:22.842Z] Executing (default): INSERT INTO `Sessions` (`sid`,`expires`,`data`,`createdAt`,`updatedAt`) VALUES ($1,$2,$3,$4,$5);
+[2025-02-12T01:04:22.848Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:04:22.874Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 1;
+[2025-02-12T01:04:22.919Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:04:23.007Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:04:23.018Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:04:38.943Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:04:38.988Z] Executing (default): UPDATE `Users` SET `restaurantName`=$1,`logo`=$2,`updatedAt`=$3 WHERE `id` = $4
+[2025-02-12T01:04:39.006Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:04:39.022Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:04:39.035Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 1;
+[2025-02-12T01:04:39.077Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:04:39.165Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:04:39.188Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:04:50.073Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:04:50.092Z] Executing (default): UPDATE `Users` SET `restaurantName`=$1,`logo`=$2,`updatedAt`=$3 WHERE `id` = $4
+[2025-02-12T01:04:50.111Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:04:50.130Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:04:50.143Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 1;
+[2025-02-12T01:04:50.185Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:04:50.262Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:04:50.278Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:05:14.827Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:05:14.833Z] Executing (default): INSERT INTO `Sections` (`id`,`name`,`createdAt`,`updatedAt`,`UserId`) VALUES (NULL,$1,$2,$3,$4);
+[2025-02-12T01:05:14.845Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:05:14.854Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:05:14.862Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 1;
+[2025-02-12T01:05:14.888Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:05:14.950Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:05:14.959Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:06:16.271Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:06:16.294Z] Executing (default): INSERT INTO `Products` (`id`,`name`,`description`,`price`,`image`,`createdAt`,`updatedAt`,`SectionId`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);
+[2025-02-12T01:06:16.313Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:06:16.334Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:06:16.346Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 1;
+[2025-02-12T01:06:16.387Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:06:16.495Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:06:16.508Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:07:17.332Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:07:17.350Z] Executing (default): INSERT INTO `Products` (`id`,`name`,`description`,`price`,`image`,`createdAt`,`updatedAt`,`SectionId`) VALUES (NULL,$1,$2,$3,$4,$5,$6,$7);
+[2025-02-12T01:07:17.365Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:07:17.378Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:07:17.388Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 1;
+[2025-02-12T01:07:17.419Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:07:17.504Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:07:17.515Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:07:23.474Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:07:23.482Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T01:07:23.519Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:07:23.582Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:07:23.590Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:07:23.604Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:07:23.611Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:07:23.620Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:07:23.627Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:07:23.632Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:07:23.639Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:07:23.655Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:07:23.666Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:07:23.682Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:07:23.688Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:07:23.696Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:07:23.716Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:07:23.722Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:07:23.730Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:07:23.747Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:07:23.817Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:03.717Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:03.725Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T01:08:03.775Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:03.957Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:03.973Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:03.981Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:03.992Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:03.999Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:04.006Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:04.012Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:04.048Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:04.069Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:04.077Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:04.098Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:04.108Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:04.117Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:04.127Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:04.151Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:04.182Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:04.242Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:04.250Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:05.695Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:05.730Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 1;
+[2025-02-12T01:08:05.855Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:06.110Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:06.140Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:08.188Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:08.205Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T01:08:08.290Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:08.485Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:08.502Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:08.529Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:08.580Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:08.641Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:08.668Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:08.693Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:08.712Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:08.729Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:08.747Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:08.767Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:08.831Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:08.847Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:08.864Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:08.881Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:08.900Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:08:08.944Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:08:09.193Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:10:11.338Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:10:11.347Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:10:11.353Z] Executing (default): DELETE FROM `Sessions` WHERE `sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME'
+[2025-02-12T01:10:11.381Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:10:22.962Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = '-jxpOhiwZdq12YHm0oHlwQOMx3O5inME';
+[2025-02-12T01:10:22.967Z] Executing (default): SELECT `id`, `username`, `password`, `restaurantName`, `logo`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'Rocket';
+[2025-02-12T01:10:23.109Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'm6Asza4q35zMM4S1HtdOpzolBVUX0yNk';
+[2025-02-12T01:10:23.114Z] Executing (default): INSERT INTO `Sessions` (`sid`,`expires`,`data`,`createdAt`,`updatedAt`) VALUES ($1,$2,$3,$4,$5);
+[2025-02-12T01:10:23.127Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'm6Asza4q35zMM4S1HtdOpzolBVUX0yNk';
+[2025-02-12T01:10:23.135Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 1;
+[2025-02-12T01:10:23.167Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:10:23.248Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'm6Asza4q35zMM4S1HtdOpzolBVUX0yNk';
+[2025-02-12T01:10:23.256Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:10:29.178Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'm6Asza4q35zMM4S1HtdOpzolBVUX0yNk';
+[2025-02-12T01:10:29.183Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'm6Asza4q35zMM4S1HtdOpzolBVUX0yNk';
+[2025-02-12T01:10:29.186Z] Executing (default): DELETE FROM `Sessions` WHERE `sid` = 'm6Asza4q35zMM4S1HtdOpzolBVUX0yNk'
+[2025-02-12T01:10:29.205Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'm6Asza4q35zMM4S1HtdOpzolBVUX0yNk';
+[2025-02-12T01:10:38.138Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'm6Asza4q35zMM4S1HtdOpzolBVUX0yNk';
+[2025-02-12T01:10:38.147Z] Executing (default): SELECT `id`, `username`, `password`, `restaurantName`, `logo`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'admin ';
+[2025-02-12T01:10:58.627Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'm6Asza4q35zMM4S1HtdOpzolBVUX0yNk';
+[2025-02-12T01:10:58.635Z] Executing (default): SELECT `id`, `username`, `password`, `restaurantName`, `logo`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'Rocket';
+[2025-02-12T01:10:58.808Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:10:58.813Z] Executing (default): INSERT INTO `Sessions` (`sid`,`expires`,`data`,`createdAt`,`updatedAt`) VALUES ($1,$2,$3,$4,$5);
+[2025-02-12T01:10:58.818Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:10:58.831Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 1;
+[2025-02-12T01:10:58.857Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:10:58.935Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:10:58.947Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:16:49.277Z] Executing (default): DELETE FROM `Sessions` WHERE `expires` < '2025-02-12 01:16:49.274 +00:00'
+[2025-02-12T01:24:32.156Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2025-02-12T01:24:32.166Z] Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2025-02-12T01:24:32.169Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2025-02-12T01:24:32.173Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sections';
+[2025-02-12T01:24:32.176Z] Executing (default): PRAGMA INDEX_LIST(`Sections`)
+[2025-02-12T01:24:32.179Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Products';
+[2025-02-12T01:24:32.182Z] Executing (default): PRAGMA INDEX_LIST(`Products`)
+[2025-02-12T01:24:32.185Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sessions';
+[2025-02-12T01:24:32.188Z] Executing (default): PRAGMA INDEX_LIST(`Sessions`)
+[2025-02-12T01:24:32.190Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Sessions_1`)
+[2025-02-12T01:24:39.759Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:39.776Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 1;
+[2025-02-12T01:24:39.861Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:24:39.916Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:39.926Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:24:41.261Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:41.273Z] Executing (default): SELECT `Section`.`id`, `Section`.`name`, `Section`.`createdAt`, `Section`.`updatedAt`, `Section`.`UserId`, `Products`.`id` AS `Products.id`, `Products`.`name` AS `Products.name`, `Products`.`description` AS `Products.description`, `Products`.`price` AS `Products.price`, `Products`.`image` AS `Products.image`, `Products`.`createdAt` AS `Products.createdAt`, `Products`.`updatedAt` AS `Products.updatedAt`, `Products`.`SectionId` AS `Products.SectionId` FROM `Sections` AS `Section` LEFT OUTER JOIN `Products` AS `Products` ON `Section`.`id` = `Products`.`SectionId` WHERE `Section`.`UserId` = 1;
+[2025-02-12T01:24:41.334Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:24:41.420Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:41.429Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:41.441Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:41.453Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:41.460Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:41.468Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:41.482Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:24:41.490Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:24:41.503Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:24:41.510Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:24:41.526Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:41.536Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:41.545Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:24:41.553Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:24:41.578Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:41.624Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:24:41.636Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:24:41.642Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:24:42.196Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:42.204Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:42.211Z] Executing (default): DELETE FROM `Sessions` WHERE `sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv'
+[2025-02-12T01:24:42.244Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:49.090Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:24:54.914Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:26:54.069Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2025-02-12T01:26:54.079Z] Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2025-02-12T01:26:54.082Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2025-02-12T01:26:54.085Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sections';
+[2025-02-12T01:26:54.088Z] Executing (default): PRAGMA INDEX_LIST(`Sections`)
+[2025-02-12T01:26:54.091Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Products';
+[2025-02-12T01:26:54.094Z] Executing (default): PRAGMA INDEX_LIST(`Products`)
+[2025-02-12T01:26:54.097Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sessions';
+[2025-02-12T01:26:54.100Z] Executing (default): PRAGMA INDEX_LIST(`Sessions`)
+[2025-02-12T01:26:54.103Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Sessions_1`)
+[2025-02-12T01:26:59.931Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:27:46.691Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Users';
+[2025-02-12T01:27:46.753Z] Executing (default): PRAGMA INDEX_LIST(`Users`)
+[2025-02-12T01:27:46.762Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)
+[2025-02-12T01:27:46.777Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sections';
+[2025-02-12T01:27:46.792Z] Executing (default): PRAGMA INDEX_LIST(`Sections`)
+[2025-02-12T01:27:46.808Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Products';
+[2025-02-12T01:27:46.818Z] Executing (default): PRAGMA INDEX_LIST(`Products`)
+[2025-02-12T01:27:46.829Z] Executing (default): SELECT name FROM sqlite_master WHERE type='table' AND name='Sessions';
+[2025-02-12T01:27:46.840Z] Executing (default): PRAGMA INDEX_LIST(`Sessions`)
+[2025-02-12T01:27:46.851Z] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Sessions_1`)
+[2025-02-12T01:27:47.145Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:28:30.357Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:28:30.383Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:29:26.343Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:29:26.381Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:29:31.856Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:29:34.448Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:29:35.211Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:29:35.966Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:29:37.309Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:30:00.301Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'yNrxeZNCRzCPl1Dnbp3eK_APvfaB3mZv';
+[2025-02-12T01:30:00.335Z] Executing (default): SELECT `id`, `username`, `password`, `restaurantName`, `logo`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'MLK de vila';
+[2025-02-12T01:30:00.511Z] Executing (default): INSERT INTO `Users` (`id`,`username`,`password`,`createdAt`,`updatedAt`) VALUES (NULL,$1,$2,$3,$4);
+[2025-02-12T01:30:00.525Z] Executing (default): SELECT `id`, `username`, `password`, `restaurantName`, `logo`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'MLK de vila';
+[2025-02-12T01:30:00.703Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'LsOt9CshcfFvGKDJOEH9CrCPV0QEr-gR';
+[2025-02-12T01:30:00.710Z] Executing (default): INSERT INTO `Sessions` (`sid`,`expires`,`data`,`createdAt`,`updatedAt`) VALUES ($1,$2,$3,$4,$5);
+[2025-02-12T01:30:00.714Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'LsOt9CshcfFvGKDJOEH9CrCPV0QEr-gR';
+[2025-02-12T01:30:00.740Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 2;
+[2025-02-12T01:30:00.780Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:30:06.481Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'LsOt9CshcfFvGKDJOEH9CrCPV0QEr-gR';
+[2025-02-12T01:30:06.489Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'LsOt9CshcfFvGKDJOEH9CrCPV0QEr-gR';
+[2025-02-12T01:30:06.497Z] Executing (default): DELETE FROM `Sessions` WHERE `sid` = 'LsOt9CshcfFvGKDJOEH9CrCPV0QEr-gR'
+[2025-02-12T01:30:06.526Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'LsOt9CshcfFvGKDJOEH9CrCPV0QEr-gR';
+[2025-02-12T01:30:13.653Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'LsOt9CshcfFvGKDJOEH9CrCPV0QEr-gR';
+[2025-02-12T01:30:13.661Z] Executing (default): SELECT `id`, `username`, `password`, `restaurantName`, `logo`, `createdAt`, `updatedAt` FROM `Users` AS `User` WHERE `User`.`username` = 'MLK de vila';
+[2025-02-12T01:30:13.836Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'rQDbludRt4EyeWuqHcDuNkOMqPmBff4Q';
+[2025-02-12T01:30:13.843Z] Executing (default): INSERT INTO `Sessions` (`sid`,`expires`,`data`,`createdAt`,`updatedAt`) VALUES ($1,$2,$3,$4,$5);
+[2025-02-12T01:30:13.848Z] Executing (default): SELECT `sid`, `expires`, `data`, `createdAt`, `updatedAt` FROM `Sessions` AS `Session` WHERE `Session`.`sid` = 'rQDbludRt4EyeWuqHcDuNkOMqPmBff4Q';
+[2025-02-12T01:30:13.878Z] Executing (default): SELECT `User`.`id`, `User`.`username`, `User`.`password`, `User`.`restaurantName`, `User`.`logo`, `User`.`createdAt`, `User`.`updatedAt`, `Sections`.`id` AS `Sections.id`, `Sections`.`name` AS `Sections.name`, `Sections`.`createdAt` AS `Sections.createdAt`, `Sections`.`updatedAt` AS `Sections.updatedAt`, `Sections`.`UserId` AS `Sections.UserId` FROM `Users` AS `User` LEFT OUTER JOIN `Sections` AS `Sections` ON `User`.`id` = `Sections`.`UserId` WHERE `User`.`id` = 2;
+[2025-02-12T01:30:13.913Z] Executing (default): UPDATE `Sessions` SET `expires`=$1,`updatedAt`=$2 WHERE `sid` = $3
+[2025-02-12T01:42:46.632Z] Executing (default): DELETE FROM `Sessions` WHERE `expires` < '2025-02-12 01:42:46.630 +00:00'
+[2025-02-12T01:57:46.631Z] Executing (default): DELETE FROM `Sessions` WHERE `expires` < '2025-02-12 01:57:46.630 +00:00'

@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      {{#if user.logo}}
+        <img src="{{user.logo}}" height="30" class="d-inline-block align-top" alt="Logo">
+      {{/if}}
+      {{#if user.restaurantName}}
+        {{user.restaurantName}}
+      {{else}}
+        Food System
+      {{/if}}
+    </a>
+    <div class="navbar-nav">
+      {{#if user}}
+        <a class="nav-link" href="/dashboard">Dashboard</a>
+        <a class="nav-link" href="/logout">Sair</a>
+      {{else}}
+        <a class="nav-link" href="/login">Login</a>
+        <a class="nav-link" href="/register">Criar conta</a>
+
+      {{/if}}
+    </div>
+  </div>
+</nav>
